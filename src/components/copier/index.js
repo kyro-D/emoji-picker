@@ -28,25 +28,28 @@ export default () => {
 
 return(
     <>
-        <div>
-         {chosenEmoji ? (
+        <div className="main-container">
+          <div className="chosen-emoji-container">
+            {chosenEmoji ? (
 
-             <div>
-               <span>You chose: {chosenEmoji.emoji}</span>
+                <div>
+                  <span>You chose: {chosenEmoji.emoji}</span>
 
-              <span> {copied ? 'Copied text!' : ''} </span>
-            </div>
+                  <span> {copied ? 'Copied text!' : ''} </span>
+                </div>
 
-         ) : (
-           <span>No emoji Chosen</span>
-         )}
+            ) : (
+              <span>No emoji Chosen</span>
+            )}
+          </div>
          <Picker onEmojiClick={onEmojiClick} />
 
          <CopyToClipboard
               text={ chosenEmoji ? (chosenEmoji.emoji) : ('')}
-              onCopy={() => setCopied(true)}>
+              onCopy={() => setCopied(true)}
+              className="emoji-copy">
                 <button> Click to copy to Keypboard </button>
-              </CopyToClipboard>
+          </CopyToClipboard>
 
 
 
