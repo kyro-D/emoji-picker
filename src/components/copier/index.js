@@ -19,6 +19,7 @@ export default () => {
 
   const onEmojiClick = (event, emojiObject) => {
      setChosenEmoji(emojiObject);
+     setCopied(false);
    };
 
   //  <CopyToClipboard
@@ -46,7 +47,9 @@ return(
 
          <CopyToClipboard
               text={ chosenEmoji ? (chosenEmoji.emoji) : ('')}
-              onCopy={() => setCopied(true)}
+              onCopy={() => {
+                setCopied(true); 
+              }} 
               className="emoji-copy">
                 <button> Click to copy to Keypboard </button>
           </CopyToClipboard>
