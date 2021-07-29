@@ -22,11 +22,6 @@ export default () => {
      setCopied(false);
    };
 
-  //  <CopyToClipboard
-  //     text={chosenEmoji.emoji}
-  //     onCopy={() => setCopied(true)}>
-  // </CopyToClipboard>
-
 return(
     <>
         <div className="main-container">
