@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://kdr-emoji-picker.herokuapp.com/",
     title: "emoji picker",
   },
   plugins: [
